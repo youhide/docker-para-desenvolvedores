@@ -13,7 +13,7 @@ Seguem alguns comandos úteis e simples abaixo:
 -   Remove volumes "órfãos"  
 `docker volume prune`
 -   Mostra uso de recursos dos containers rodando  
-`docker stats $(docker ps --format {{.Names}})`
+`docker stats $(docker ps --format {{"{{.Names}}"}})`
 -   Listar containers parados  
 `docker ps -f "status=exited"`
 -   Acessar terminal do container  
