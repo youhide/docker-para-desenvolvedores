@@ -17,6 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: config git user and mail
+      run: |
+        git config --global user.email "docker@para.desenvolvedores"
+        git config --global user.name "Docker para Desenvolvedores"
     - name: npm install, build, and deploy
       run: |
         npm ci
