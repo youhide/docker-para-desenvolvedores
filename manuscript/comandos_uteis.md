@@ -4,6 +4,8 @@ Seguem alguns comandos úteis e simples abaixo:
 
 -   Remover todos os containers sem uso  
 `docker container prune`
+-   Remover tudo  
+`docker system prune -a`
 -   Parar todos os containers  
 `docker stop $(docker ps -q)`
 -   Remover todas as imagens locais  
