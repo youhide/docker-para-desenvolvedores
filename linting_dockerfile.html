@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html lang="pt" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Você faz linting do seu Dockerfile? Deveria... · Docker para Desenvolvedores</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Rafael Gomes">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="rodando_aplicacoes_gui.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Sumário</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Organização
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="proposito.html">
+            
+                <a href="proposito.html">
+            
+                    
+                    Propósito desse livro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="agradecimentos.html">
+            
+                <a href="agradecimentos.html">
+            
+                    
+                    Agradecimentos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introducao.html">
+            
+                <a href="introducao.html">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="porque.html">
+            
+                <a href="porque.html">
+            
+                    
+                    Por que usar Docker?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="oquee.html">
+            
+                <a href="oquee.html">
+            
+                    
+                    O que é Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="instalacao.html">
+            
+                <a href="instalacao.html">
+            
+                    
+                    Instalação
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="comandos.html">
+            
+                <a href="comandos.html">
+            
+                    
+                    Comandos básicos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="criandoimagem.html">
+            
+                <a href="criandoimagem.html">
+            
+                    
+                    Criando sua própria imagem no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="armazenamento.html">
+            
+                <a href="armazenamento.html">
+            
+                    
+                    Entendendo armazenamento no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="rede.html">
+            
+                <a href="rede.html">
+            
+                    
+                    Entendendo a rede no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="machine.html">
+            
+                <a href="machine.html">
+            
+                    
+                    Utilizando docker em múltiplos ambientes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="compose.html">
+            
+                <a href="compose.html">
+            
+                    
+                    Gerenciando múltiplos containers docker com Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="macos_e_windows.html">
+            
+                <a href="macos_e_windows.html">
+            
+                    
+                    Como usar Docker sem GNU/Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="dockerizarando_app_todo.html">
+            
+                <a href="dockerizarando_app_todo.html">
+            
+                    
+                    Transformando sua aplicação em container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="basecode.html">
+            
+                <a href="basecode.html">
+            
+                    
+                    Base de código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="dependencia.html">
+            
+                <a href="dependencia.html">
+            
+                    
+                    Dependência
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="configuracoes.html">
+            
+                <a href="configuracoes.html">
+            
+                    
+                    Configurações
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="servicosdeapoio.html">
+            
+                <a href="servicosdeapoio.html">
+            
+                    
+                    Serviços de Apoio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="construa-lance-execute.html">
+            
+                <a href="construa-lance-execute.html">
+            
+                    
+                    Construa, lance, execute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="processos.html">
+            
+                <a href="processos.html">
+            
+                    
+                    Processos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="vinculos.html">
+            
+                <a href="vinculos.html">
+            
+                    
+                    Vínculo de portas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="concorrencia.html">
+            
+                <a href="concorrencia.html">
+            
+                    
+                    Concorrência
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="descartabilidade.html">
+            
+                <a href="descartabilidade.html">
+            
+                    
+                    Descartabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="paridade.html">
+            
+                <a href="paridade.html">
+            
+                    
+                    Paridade entre desenvolvimento/produção
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="logs.html">
+            
+                <a href="logs.html">
+            
+                    
+                    Logs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="admin.html">
+            
+                <a href="admin.html">
+            
+                    
+                    Processos de administração
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="dicas.html">
+            
+                <a href="dicas.html">
+            
+                    
+                    Dicas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="apendice.html">
+            
+                <a href="apendice.html">
+            
+                    
+                    Apêndice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="container_vm.html">
+            
+                <a href="container_vm.html">
+            
+                    
+                    Container ou máquina virtual?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="comandos_uteis.html">
+            
+                <a href="comandos_uteis.html">
+            
+                    
+                    Comandos úteis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="rodando_aplicacoes_gui.html">
+            
+                <a href="rodando_aplicacoes_gui.html">
+            
+                    
+                    Posso rodar aplicações GUI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.33" data-path="linting_dockerfile.html">
+            
+                <a href="linting_dockerfile.html">
+            
+                    
+                    Você faz linting do seu Dockerfile? Deveria...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado com GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Você faz linting do seu Dockerfile? Deveria...</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="voc&#xEA;-faz-linting-do-seu-dockerfile-deveria">Voc&#xEA; faz linting do seu Dockerfile? Deveria...</h1>
+<p>Ent&#xE3;o voc&#xEA; escreveu seu Dockerfile seguindo as <a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" target="_blank">Melhores pr&#xE1;ticas</a> e tudo mais, agora n&#xE3;o precisa fazer mais nada, certo? Que tal fazer linting do seu Dockerfile?</p>
+<h2 id="e-como-posso-fazer-isso">E como posso fazer isso?</h2>
+<p>Isso vai depender de como &#xE9; o teu processo de build de imagens, se &#xE9; manual ou automatizado</p>
+<h3 id="o-meu-&#xE9;-manual-como-fa&#xE7;o">O meu &#xE9; manual, como fa&#xE7;o?</h3>
+<p>Nesse caso &#xE9; s&#xF3; instalar na m&#xE1;quina o <a href="https://github.com/replicatedhq/dockerfilelint/" target="_blank">linter</a> (ou usar uma <a href="https://hub.docker.com/r/replicated/dockerfilelint/" target="_blank">imagem Docker</a>) e execut&#xE1;-lo com o Dockerfile como alvo.<br>Exemplo:<br>Dentro do diret&#xF3;rio do dockerfilelint:</p>
+<pre><code>./bin/dockerfilelint &lt;/caminho/para/o/Dockerfile&gt;
+</code></pre><p>ou</p>
+<pre><code>docker run --rm -v /diretorio/do/dockerfile:/workdir -w /workdir replicated/dockerfilelint Dockerfile
+</code></pre><p><strong>Obs</strong>: Note que o caminho do volume &#xE9; o caminho para o diret&#xF3;rio onde o Dockerfile vai estar, n&#xE3;o diretamente para o arquivo</p>
+<p>H&#xE1; tamb&#xE9;m a op&#xE7;&#xE3;o de utilizar o site <a href="https://www.fromlatest.io/" target="_blank">FROM:latest</a></p>
+<h3 id="o-meu-&#xE9;-automatizado-como-fa&#xE7;o">O meu &#xE9; automatizado, como fa&#xE7;o?</h3>
+<p>Depende de como &#xE9; feita essa automatiza&#xE7;&#xE3;o (n&#xE3;o que mude muito), se ela &#xE9; feita atrav&#xE9;s da op&#xE7;&#xE3;o automated build do docker hub ou se &#xE9; feita em uma ferramenta de CI/CD (opcionalmente com push para o registry na pipeline)</p>
+<h4 id="eu-uso-o-automated-build-&#xE9;-mais-pr&#xE1;tico">Eu uso o automated build! &#xC9; mais pr&#xE1;tico</h4>
+<p>Na automated build s&#xE3;o necess&#xE1;rias algumas a&#xE7;&#xF5;es...</p>
+<ol>
+<li>Desabilitar a op&#xE7;&#xE3;o <em>Build Settings &gt; Build Settings &gt; When active, builds will happen automatically on pushes.</em></li>
+<li>Ativar as Triggers em <em>Build Settings &gt; Build Triggers &gt; Activate Triggers</em>, ser&#xE1; gerado um token e uma URL de post para ativar a trigger</li>
+<li>Configurar um ambiente de CI/CD para executar o linter e enviar o push para a URL da trigger (usando o comando como se fosse manual no est&#xE1;gio de teste)</li>
+</ol>
+<p>Assim o docker hub n&#xE3;o ir&#xE1; executar o build automaticamente ap&#xF3;s cada push e a ferramenta de CI/CD ir&#xE1; enviar a requisi&#xE7;&#xE3;o de build ap&#xF3;s verificar que est&#xE1; tudo ok.</p>
+<p>Exemplo (com circle-ci):  </p>
+<ol>
+<li><img src="images/lintdocker1.png" alt="auto builds"></li>
+<li><img src="images/lintdocker2.png" alt="triggers"></li>
+<li>Exemplo de circle.yml</li>
+</ol>
+<pre><code>machine:
+  services:
+    - docker
+
+test:
+  override:
+    - docker run --rm -v $(pwd):/workdir -w /workdir replicated/dockerfilelint Dockerfile
+
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - curl -X POST &lt;URL da Trigger&gt;
+</code></pre><p>Exemplo 2 (com travis-ci):  </p>
+<ol>
+<li><img src="images/lintdocker1.png" alt="auto builds"></li>
+<li><img src="images/lintdocker2.png" alt="triggers"></li>
+<li>Exemplo de .travis.yml</li>
+</ol>
+<pre><code>sudo: required
+
+services:
+  - docker
+
+script:
+  - docker run --rm -v $(pwd):/workdir -w /workdir replicated/dockerfilelint Dockerfile
+
+after_success:
+  - if [ &quot;$TRAVIS_BRANCH&quot; == &quot;master&quot; ]; then
+    curl -X POST &lt;URL da Trigger&gt;
+    fi
+</code></pre><h4 id="eu-uso-uma-ferramenta-de-cicd-porque-prefiro-ter-mais-controle-sobre-o-buildporque-meu-reposit&#xF3;rio-de-imagem-originalmente-era-manualartigo-pendenteporque-eu-uso-um-registry-privadoseu-motivo-aqui">Eu uso uma ferramenta de CI/CD! Porque prefiro ter mais controle sobre o build/Porque meu reposit&#xF3;rio de imagem originalmente era manual<sup>[artigo pendente]</sup>/Porque eu uso um registry privado/Seu motivo aqui</h4>
+<p>Basta incluir um est&#xE1;gio de teste antes do build (se j&#xE1; n&#xE3;o tem um) na pipeline da imagem e usar a ferramenta como se fosse manual.</p>
+<h2 id="como-aparece-o-resultado-do-teste">Como aparece o resultado do teste?</h2>
+<p>A sa&#xED;da ser&#xE1; algo parecido com isso, caso n&#xE3;o encontre erros:</p>
+<pre><code>File:   Dockerfile
+Issues: None found &#x1F44D;
+</code></pre><p>Caso encontre algo, o relat&#xF3;rio ser&#xE1; parecido com isso:</p>
+<pre><code>File:   Dockerfile
+Issues: 3
+
+Line 5: forceerror
+Issue  Category      Title                 Description
+    1  Possible Bug  Missing Required      All commands in a Dockerfile require at least 1 argument.
+                     Arguments             A line in a Dockerfile can be in any of the following formats:
+                                           * * *
+                                           #### `# Comment`
+                                           Docker will treat any line that begins with a `#` as a comment.
+                                           * * *
+                                           #### `INSTRUCTION arguments`
+                                           All instructions require at least 1 argument, and should be on the
+                                           same line as the `INSTRUCTION`.
+                                           * * *
+                                           #### `RUN` continuation
+                                           If a `RUN` line ends with a `\`, the next line will be treated as
+                                           part of the same `RUN` arguement.
+                                           * * *
+                                           #### Blank or Whitespace
+                                           Blank lines are allowed and will be ignored.
+                                           * * *
+    2  Clarity       Capitalize            For clarity and readability, all instructions in a Dockerfile
+                     Dockerfile            should be uppercase.
+                     Instructions          This is a convention adopted by most of the official images and
+                                           greatly improves readability in long Dockerfiles.  For an example
+                                           of
+                                           why this makes a difference, check out the current [redis
+                                           Dockerfile](https://github.com/docker-library/redis/blob/b375650fb6
+                                           9b7db819e90c0033433c705b28656e/3.0/Dockerfile)
+                                           and you should be able to easily see the instructions used.
+    3  Possible Bug  Invalid Line          This line is not a valid Dockerfile line.
+</code></pre><p>Como se pode notar, a descri&#xE7;&#xE3;o dos erros &#xE9; feita em Markdown.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rodando_aplicacoes_gui.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Posso rodar aplicações GUI?">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Você faz linting do seu Dockerfile? Deveria...","level":"1.33","depth":1,"previous":{"title":"Posso rodar aplicações GUI?","level":"1.32","depth":1,"path":"rodando_aplicacoes_gui.md","ref":"rodando_aplicacoes_gui.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","ga","github"],"root":"./manuscript","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":""},"github":{"url":"https://github.com/gomex/docker-para-desenvolvedores"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Rafael Gomes","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"organizacao.md","glossary":"glossario.md","summary":"sumario.md"},"variables":{},"title":"Docker para Desenvolvedores","language":"pt","gitbook":"*"},"file":{"path":"linting_dockerfile.md","mtime":"2019-12-16T20:22:44.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-16T20:38:47.789Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

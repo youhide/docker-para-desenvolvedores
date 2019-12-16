@@ -1,0 +1,746 @@
+
+<!DOCTYPE HTML>
+<html lang="pt" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Posso rodar aplicações GUI? · Docker para Desenvolvedores</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Rafael Gomes">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linting_dockerfile.html" />
+    
+    
+    <link rel="prev" href="comandos_uteis.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Sumário</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Organização
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="proposito.html">
+            
+                <a href="proposito.html">
+            
+                    
+                    Propósito desse livro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="agradecimentos.html">
+            
+                <a href="agradecimentos.html">
+            
+                    
+                    Agradecimentos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introducao.html">
+            
+                <a href="introducao.html">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="porque.html">
+            
+                <a href="porque.html">
+            
+                    
+                    Por que usar Docker?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="oquee.html">
+            
+                <a href="oquee.html">
+            
+                    
+                    O que é Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="instalacao.html">
+            
+                <a href="instalacao.html">
+            
+                    
+                    Instalação
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="comandos.html">
+            
+                <a href="comandos.html">
+            
+                    
+                    Comandos básicos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="criandoimagem.html">
+            
+                <a href="criandoimagem.html">
+            
+                    
+                    Criando sua própria imagem no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="armazenamento.html">
+            
+                <a href="armazenamento.html">
+            
+                    
+                    Entendendo armazenamento no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="rede.html">
+            
+                <a href="rede.html">
+            
+                    
+                    Entendendo a rede no Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="machine.html">
+            
+                <a href="machine.html">
+            
+                    
+                    Utilizando docker em múltiplos ambientes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="compose.html">
+            
+                <a href="compose.html">
+            
+                    
+                    Gerenciando múltiplos containers docker com Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="macos_e_windows.html">
+            
+                <a href="macos_e_windows.html">
+            
+                    
+                    Como usar Docker sem GNU/Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="dockerizarando_app_todo.html">
+            
+                <a href="dockerizarando_app_todo.html">
+            
+                    
+                    Transformando sua aplicação em container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="basecode.html">
+            
+                <a href="basecode.html">
+            
+                    
+                    Base de código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="dependencia.html">
+            
+                <a href="dependencia.html">
+            
+                    
+                    Dependência
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="configuracoes.html">
+            
+                <a href="configuracoes.html">
+            
+                    
+                    Configurações
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="servicosdeapoio.html">
+            
+                <a href="servicosdeapoio.html">
+            
+                    
+                    Serviços de Apoio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="construa-lance-execute.html">
+            
+                <a href="construa-lance-execute.html">
+            
+                    
+                    Construa, lance, execute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="processos.html">
+            
+                <a href="processos.html">
+            
+                    
+                    Processos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="vinculos.html">
+            
+                <a href="vinculos.html">
+            
+                    
+                    Vínculo de portas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="concorrencia.html">
+            
+                <a href="concorrencia.html">
+            
+                    
+                    Concorrência
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="descartabilidade.html">
+            
+                <a href="descartabilidade.html">
+            
+                    
+                    Descartabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="paridade.html">
+            
+                <a href="paridade.html">
+            
+                    
+                    Paridade entre desenvolvimento/produção
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="logs.html">
+            
+                <a href="logs.html">
+            
+                    
+                    Logs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="admin.html">
+            
+                <a href="admin.html">
+            
+                    
+                    Processos de administração
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="dicas.html">
+            
+                <a href="dicas.html">
+            
+                    
+                    Dicas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="apendice.html">
+            
+                <a href="apendice.html">
+            
+                    
+                    Apêndice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="container_vm.html">
+            
+                <a href="container_vm.html">
+            
+                    
+                    Container ou máquina virtual?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="comandos_uteis.html">
+            
+                <a href="comandos_uteis.html">
+            
+                    
+                    Comandos úteis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.32" data-path="rodando_aplicacoes_gui.html">
+            
+                <a href="rodando_aplicacoes_gui.html">
+            
+                    
+                    Posso rodar aplicações GUI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="linting_dockerfile.html">
+            
+                <a href="linting_dockerfile.html">
+            
+                    
+                    Você faz linting do seu Dockerfile? Deveria...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado com GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Posso rodar aplicações GUI?</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="posso-rodar-aplica&#xE7;&#xF5;es-gui">Posso rodar aplica&#xE7;&#xF5;es GUI?</h2>
+<p>Com certeza, &#xE9; plenamente poss&#xED;vel rodar aplica&#xE7;&#xF5;es GUI em containers, o que significa que todas as vantagens de utilizar o Docker se aplicam tamb&#xE9;m &#xE0;s aplica&#xE7;&#xF5;es gr&#xE1;ficas.</p>
+<p>Al&#xE9;m disso &#xE9; poss&#xED;vel fazer a aplica&#xE7;&#xE3;o funcionar em multiplos sistemas (Linux, Windows e macOS) apenas construindo ela para Linux.</p>
+<h3 id="como">Como?</h3>
+<p>Antes de mais nada... Em 99% dos casos &#xE9; preciso liberar o acesso ao X: <code>xhost local</code> (essa libera&#xE7;&#xE3;o ficar&#xE1; vigente at&#xE9; desligar/reinicar o host)</p>
+<p>Comando mais simples o poss&#xED;vel, monta o socket X11 do host no container e define o display (note que vamos &quot;evoluindo&quot; o comando aos poucos, mas pode usar apenas as flags que achar necess&#xE1;rio - as &#xFA;nicas obrigat&#xF3;rias s&#xE3;o a montagem de volume do <code>/tmp/.X11-unix</code> e a vari&#xE1;vel de ambiente <code>DISPLAY</code>):</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+imagem [comando]
+</code></pre><p>Em alguns casos a vari&#xE1;vel <code>DISPLAY</code> tem de ser <code>DISPLAY=unix$DISPLAY</code> (mas pra ser sincero at&#xE9; agora eu n&#xE3;o sei bem o motivo, somente que era o indicado pela pessoa que fez a imagem).</p>
+<p>Para utilizar o suporte a acelera&#xE7;&#xE3;o 3D por hardware:</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+imagem [comando]
+</code></pre><p>Adicionando audio:</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+--device /dev/snd \
+imagem [comando]
+</code></pre><p>Adicionando webcam:</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+--device /dev/snd \
+--device /dev/video0 \
+imagem [comando]
+</code></pre><p>Usando a mesma data/hora do host:</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+--device /dev/snd \
+--device /dev/video0 \
+-v /etc/localtime:/etc/localtime:ro \
+imagem [comando]
+</code></pre><p>Aten&#xE7;&#xE3;o: dependendo da distribui&#xE7;&#xE3;o, n&#xE3;o h&#xE1; um /etc/localtime, tem de averiguar como ela define o timezone e &quot;replicar&quot; no container.</p>
+<p>Mantendo as configura&#xE7;&#xF5;es do aplicativo:</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+--device /dev/snd \
+--device /dev/video0 \
+-v /etc/localtime:/etc/localtime:ro \
+-v $HOME/.config/app:/root/.config/app \
+imagem [comando]
+</code></pre><p>Obs: o caminho &#xE9; apenas um exemplo.</p>
+<p><strong>B&#xF4;nus:</strong> Controle do video-game (na verdade qualquer dispositivo de entrada):</p>
+<pre><code>docker container run [--rm [-it]|-d] \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY \
+--device /dev/dri \
+--device /dev/snd \
+--device /dev/video0 \
+-v /etc/localtime:/etc/localtime:ro \
+-v $HOME/.config/app:/root/.config/app \
+--device /dev/input \
+imagem [comando]
+</code></pre><h3 id="e-o-docker-compose">E o docker-compose?</h3>
+<p>Funciona normalmente... Basta montar o socket X11 e definir a vari&#xE1;vel de ambiente no docker-compose.yml e ser&#xE1; poss&#xED;vel iniciar multiplos aplicativos com apenas um comando.</p>
+<h3 id="no-windows-e-macos">No Windows e macOS</h3>
+<h4 id="mac-os-x"><a href="https://github.com/docker/docker/issues/8710#issuecomment-71113263" target="_blank">Mac OS X</a></h4>
+<p>Instalar o Docker for Mac</p>
+<pre><code>brew install socat
+brew cask install xquartz
+open -a XQuartz
+
+socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\&quot;$DISPLAY\&quot;
+docker container run -e DISPLAY=hostip:0 [...] image OU DISPLAY=hostip:0 docker-compose up [-d]
+</code></pre><h4 id="windows"><a href="https://github.com/docker/docker/issues/8710#issuecomment-135109677" target="_blank">Windows</a></h4>
+<p>Instalar o xming<br>Instalar o Docker for Windows</p>
+<pre><code>xming :0 -ac -clipboard -multiwindow
+docker container run -e DISPLAY=hostip:0 [...] image OU DISPLAY=hostip:0 docker-compose up [-d]
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="comandos_uteis.html" class="navigation navigation-prev " aria-label="Previous page: Comandos úteis">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linting_dockerfile.html" class="navigation navigation-next " aria-label="Next page: Você faz linting do seu Dockerfile? Deveria...">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Posso rodar aplicações GUI?","level":"1.32","depth":1,"next":{"title":"Você faz linting do seu Dockerfile? Deveria...","level":"1.33","depth":1,"path":"linting_dockerfile.md","ref":"linting_dockerfile.md","articles":[]},"previous":{"title":"Comandos úteis","level":"1.31","depth":1,"path":"comandos_uteis.md","ref":"comandos_uteis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","ga","github"],"root":"./manuscript","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":""},"github":{"url":"https://github.com/gomex/docker-para-desenvolvedores"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Rafael Gomes","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"organizacao.md","glossary":"glossario.md","summary":"sumario.md"},"variables":{},"title":"Docker para Desenvolvedores","language":"pt","gitbook":"*"},"file":{"path":"rodando_aplicacoes_gui.md","mtime":"2019-12-16T20:22:44.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-16T20:38:47.789Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
